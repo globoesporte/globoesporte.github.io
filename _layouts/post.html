@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<article
+  class="post post-content{% if page.categories contains 'project' %} project-post{% endif %}"
+  itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="single-post">
+
+    {% if page.hero %}
+    <div class="post-cover">
+      <a href="{{page.hero.link}}" target="_blank" class="post-cover__author">
+        <span class="post-cover__paint">{{page.hero.paint}}</span>
+        by {{page.hero.author}}
+      </a>
+      <img src="../assets/images/heros/{{page.hero.imagePath}}">
+    </div>
+    {% endif %}
+
+    <div class="related-tags">
+      {% for tag in page.tags %}
+      <a href="/tags/#{{tag | slugify }}" target="_blank" class="related-tags__tag">{{ tag }}</a>
+      {% endfor %}
+
+    </div>
+
+    {% include share.html %}
+
+    <header class="single-post__header">
+      <h1 class="single-post__title" itemprop="name headline">{{ page.title }}</h1>
+      {% unless page.categories contains 'project' %}
+      <p class="single-post__meta">
+        <time class="single-post__time"
+              datetime="{{ page.date | date_to_xmlschema }}"
+              itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
+        </time>
+
+        {% include minutes-to-read.html pageOrPost=page %}
+
+        <span class="single-post__reading-time" title="Estimated read time">
+                        <img class="post__time-icon"
+                             src="../assets/images/post__time.svg"
+                             alt="Time to read icon">
+                        <strong>{{ minutesResult }}</strong>{{ minutesAppend }}
+                    </span>
+        <span class="single-post__comments">
+                            <img class="post__comments-icon"
+                                 src="../assets/images/post__comments.svg"
+                                 alt="Comments icon">
+                            <span class="disqus-comment-count"
+                                  data-disqus-url="http://gabrielgodoy.com{{ page.url}}"></span>
+                    </span>
+      </p>
+      {% endunless %}
+    </header>
+
+    <div class="single-post__content" itemprop="articleBody">
+      {{ content }}
+      <div class="share-bts__mobile">
+        <a aria-label="Compartilhe no Twitter"
+           href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+           class="share-bts__icon share-bts__icon--tw"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
+           title="Compartilhe no Twitter">
+          <img src="../assets/images/icon-tw.svg">
+        </a>
+        <a aria-label="Compartilhe no Facebook"
+           href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
+           title="Compartilhe no Facebook" class="share-bts__icon share-bts__icon--fb">
+          <img src="../assets/images/icon-fb.svg">
+        </a>
+      </div>
+    </div>
+
+    {% unless page.categories contains 'project' %}
+    {% include about-author.html %}
+    {% endunless %}
+
+  </div>
+
+  <div class="disqus-container">
+    <div id="disqus_thread"></div>
+  </div>
+
+  <script>
+    'use strict';
+
+    var disqus_config = function () {
+      this.page.url = '{{ site.url }}{{ page.url }}';
+      this.page.identifier = '{{ page.url }}';
+    };
+
+    (function () {
+      var d = document, s = d.createElement('script');
+
+      s.src = '//gabrielgodoy.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+
+</article>
+
+{% unless page.categories contains 'project' %}
+<aside class="post-sidebar">
+  <div id="toc-container">
+    <span class="toc-title">Table of Contents</span>
+  </div>
+</aside>
+{% endunless %}

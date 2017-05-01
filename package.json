@@ -1,0 +1,46 @@
+{
+  "name": "globoesporte.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "jekyll": "jekyll serve",
+    "build": "gulp production --prod",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepush": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globoesporte/globoesporte.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/globoesporte/globoesporte.github.io/issues"
+  },
+  "homepage": "https://github.com/globoesporte/globoesporte.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "0.3.2",
+    "gulp-concat": "2.6.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "1.5.3",
+    "gulp-watch": "^4.3.5",
+    "husky": "0.12.0",
+    "minimist": "1.2.0",
+    "rupture": "0.6.1"
+  },
+  "dependencies": {
+    "contents": "4.0.2",
+    "highlight.js": "9.9.0",
+    "jeet": "6.1.2",
+    "jekyll": "^3.0.0-beta1"
+  }
+}

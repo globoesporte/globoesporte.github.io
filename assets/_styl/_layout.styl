@@ -1,0 +1,123 @@
+html
+  min-height 100%
+
+  @media screen and (max-width: 767px)
+    border 0
+
+body
+  background mainColor
+  color white
+
+  & ~ object
+    display none
+
+h1
+  font-family headingFont
+  font-weight 100
+
+/**
+ * Page content
+ */
+.page-content
+  center(containerMaxWidth, pad = 15px)
+  width 100%
+
+  @media screen and (max-width: 767px)
+    padding-left 20px
+    padding-right 20px
+
+.page-heading
+  font-size 20px
+
+.post-list
+  margin-left 0
+  list-style none
+
+  > li
+    margin-bottom spacingUnit
+
+.post-meta
+  font-size smallFontSize
+  color grey-color
+
+.post-link
+  display block
+  font-size 24px
+
+/**
+ * Posts
+ */
+.post-header
+  margin-bottom spacingUnit
+
+.post-title
+  font-size 42px
+  letter-spacing -1px
+  line-height 1
+
+  @include media-query(on-laptop)
+  font-size 36px
+
+.post-content
+  margin-bottom spacingUnit
+
+  h2
+    font-size 32px
+
+    @include media-query(on-laptop)
+    font-size 28px
+
+  h3
+    font-size 26px
+
+    @include media-query(on-laptop)
+    font-size 22px
+
+  h4
+    font-size 20px
+
+    @include media-query(on-laptop)
+    font-size 18px
+
+.single-post__content
+  h2,
+  h3,
+  h4,
+  h5
+    font-family: fjallaFont
+  h2
+    font-weight: bold
+    color: #1c94c4
+    rem(34px)
+    margin: 40px 0 10px
+
+  h3
+    rem(30px)
+    font-weight: bold
+    color: lighten(#1c94c4, 40%)
+    margin: 40px 0 10px
+
+  h4
+    rem(28px)
+    font-weight: bold
+    color: #1c94c4
+    margin: 20px 0 10px
+
+  h5
+    rem(20px)
+    font-weight: bold
+    color: #1c94c4
+    margin: 20px 0 10px
+
+  @media screen and (max-width: 767px)
+    h2
+      rem(28px)
+
+    h3
+      rem(24px)
+
+    h4
+      rem(20px)
+
+    h5
+      rem(16px)
