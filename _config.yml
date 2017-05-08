@@ -1,7 +1,7 @@
 title: Globoesporte
 email: gabriel.globoesporte@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I am passionated about the web and for new technologies. There is nothing more dynamic than the web, and that is why learning new things becomes a daily habit for me.
+  Site dos desenvolvedores do Globoesporte
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://globoesporte.github.io" # the base hostname & protocol for your site
 twitter_username: globoesporte
@@ -25,17 +25,6 @@ compress_html:
   endings: []
   profile: false
 
-links:
-  - title: blog
-    url: /blog
-  - title: sobre
-    url: /sobre
-  - title: Tags
-    url: /tags
-
 gems: []
-
-mermaid:
-  src: 'https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js'
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js']

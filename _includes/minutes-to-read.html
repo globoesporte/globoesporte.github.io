@@ -1,8 +1,0 @@
-{% assign words = include.pageOrPost.content | number_of_words %}
-{% if words < 360 %}
-    {% assign minutesResult = 1 %}
-    {% assign minutesAppend = ' minuto para ler' %}
-{% else %}
-    {% assign minutesResult = words | divided_by:180 %}
-    {% assign minutesAppend = ' minutos para ler' %}
-{% endif %}

@@ -1,0 +1,59 @@
+.header--main-container
+  background: green
+  width 100%
+
+.header--main
+  display flex
+  align-items center
+  justify-content center
+  height: 75px
+
+  @media screen and (max-width: 767px)
+    flex-direction: column
+    padding-top: 30px
+    padding-bottom: 5px
+    margin-bottom 30px
+
+.header__title
+  color hightlightColor
+  font-family headingFont
+  rem(24px)
+
+  @media screen and (max-width: 767px)
+    margin-bottom 20px
+
+.header__nav
+.header__nav::before
+.header__nav::after
+  position: relative
+  background: white
+  width: 21px
+  height: 4px
+  border-radius 8px
+  display: block
+
+.header__nav
+  cursor: pointer
+  margin-right auto
+
+  &::before
+    content: ''
+    top: -8px
+
+  &::after
+    content: ''
+    top: 4px
+
+  @media screen and (max-width: 767px)
+    margin-left 0
+
+.header__link
+  color hightlightColor
+  rem(18px)
+  font-family headingFont
+  margin-right 35px
+  &:last-child
+    margin-right 0
+
+.single-post__header
+  margin-top: 45px

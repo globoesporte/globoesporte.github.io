@@ -13,6 +13,12 @@ twitter_text: "Um resumo dos meus estudos sobre DevOps"
 
 ## O que é DevOps
 
+```js
+var myObject = {};
+myObject.prototype // undefined
+Object.getPrototypeOf(myObject) // Native Object.prototype object
+```
+
 A comunidade em torno de DevOps tem se unido em torno de um conjunto de princípios geralmente acordados que apoiam a filosofia. Três dos princípios mais comumente aceitos são **Cultura, Automação e Métricas**. Sem qualquer um desses, seria difícil adotar uma filosofia DevOps.
 
 O termo DevOps é a combinação das palavras “desenvolvimento” e “operações”. Seu objetivo é remover as ineficiências encontradas ao longo do pipeline de **desenvolvimento, implantação e operações**.

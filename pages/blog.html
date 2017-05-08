@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /blog/
+---
+
+<div class="blog-container">
+  <ul class="post-list">
+    {% for post in site.posts %}
+    {% include blog/post-item.html %}
+    {% endfor %}
+  </ul>
+</div>
