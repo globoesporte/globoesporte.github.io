@@ -9,8 +9,7 @@
     "build": "npm run webpack:prod",
     "webpack:dev": "webpack-dev-server --config webpack.config.dev.js",
     "webpack:prod": "webpack --config webpack.config.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepush": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
