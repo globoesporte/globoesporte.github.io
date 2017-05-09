@@ -1,5 +1,3 @@
-import 'jeet/stylus/jeet/index.styl';
-import 'rupture/rupture/index.styl';
 import '../_styl/main.styl';
 
 document.addEventListener('DOMContentLoaded', () => {

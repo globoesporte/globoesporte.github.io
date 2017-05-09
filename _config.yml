@@ -22,6 +22,6 @@ gems: []
 
 exclude: ['node_modules', 'yarn.lock', 'assets/layout', 'package.json', 'assets/_styl', 'vendor/bundle/ruby', 'assets/*.js', 'assets/js/**/*.js', 'assets/js/*.js', '*.hot-update.json', '_site/*.hot-update.json', 'npm-debug.log', 'webpack.config.dev.js', 'webpack.config.prod.js', 'README.md']
 
-keep_files: ['assets/bundle.app.js', '_site/assets/bundle.app.js']
+keep_files: ['assets/bundle.app.js']
 
 incremental: true

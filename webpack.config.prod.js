@@ -104,6 +104,6 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.[name].js',
-    path: path.join(__dirname, 'dist/assets'),
+    path: path.join(__dirname, 'src/assets'),
   },
 };
