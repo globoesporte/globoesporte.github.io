@@ -4,11 +4,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Site dos desenvolvedores do Globoesporte
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://globoesporte.github.io"
-assetspath: ''
+assetspath: http://localhost:3000/
 
 source: src
 destination: dist
-prod: true
 
 # Build settings
 markdown: kramdown
@@ -20,7 +19,7 @@ kramdown:
 
 gems: []
 
-exclude: ['node_modules', 'yarn.lock', 'assets/layout', 'package.json', 'assets/_styl', 'vendor/bundle/ruby', 'assets/*.js', 'assets/js/**/*.js', 'assets/js/*.js', '*.hot-update.json', '_site/*.hot-update.json', 'npm-debug.log', 'webpack.config.dev.js', 'webpack.config.prod.js', 'README.md']
+exclude: ['node_modules', 'yarn.lock', 'assets/layout', 'package.json', 'assets/_styl', 'vendor/bundle/ruby', 'gulpfile.js', 'assets/*.js', 'assets/js/**/*.js', 'assets/js/*.js', '*.hot-update.json', '_site/*.hot-update.json', 'npm-debug.log', 'webpack.config.dev.js', 'webpack.config.prod.js', 'README.md']
 
 keep_files: ['assets/bundle.app.js', '_site/assets/bundle.app.js']
 

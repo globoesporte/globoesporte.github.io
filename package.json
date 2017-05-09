@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run webpack:dev",
+    "jekyll": "jekyll serve --config _config.dev.yml",
+    "build": "npm run webpack:prod",
     "webpack:dev": "webpack-dev-server --config webpack.config.dev.js",
     "webpack:prod": "webpack --config webpack.config.prod.js",
-    "jekyll": "jekyll serve",
-    "nodemon": "nodemon -e html",
-    "build": "gulp production --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepush": "npm run build"
   },
@@ -70,16 +69,6 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "eslint": "^3.19.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean": "0.3.2",
-    "gulp-concat": "2.6.0",
-    "gulp-csscomb": "^3.0.6",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.3.1",
-    "gulp-uglify": "1.5.3",
-    "gulp-watch": "^4.3.5",
     "husky": "^0.13.3",
     "minimist": "1.2.0"
   },

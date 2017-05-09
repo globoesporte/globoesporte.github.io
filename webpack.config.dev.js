@@ -10,7 +10,7 @@ module.exports = {
       // and connect to the provided endpoint
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server', // bundle the client for hot reloading
-      './assets/js/main.js',
+      './src/assets/js/main.js',
     ],
   },
   devtool: 'inline-source-map',
@@ -108,8 +108,8 @@ module.exports = {
       open: false,
       proxy: 'http://localhost:4000/',
       files: [
-        `./_site/**/*.html`,
-        `./_site/assets/images/*.*`,
+        `./dist/**/*.html`,
+        `./dist/assets/images/*.*`,
       ],
       notify: {
         styles: {

@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './assets/js/main.js',
+    app: './src/assets/js/main.js',
   },
   module: {
     rules: [
@@ -101,13 +101,9 @@ module.exports = {
         warnings: false,
       },
     }),
-    // Uncomment below if vendor script exist in "entry"
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
-    // }),
   ],
   output: {
     filename: 'bundle.[name].js',
-    path: path.join(__dirname, 'assets/js/'),
+    path: path.join(__dirname, 'dist/assets'),
   },
 };
