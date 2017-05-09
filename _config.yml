@@ -27,4 +27,4 @@ compress_html:
 
 gems: []
 
-exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js']
+exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js', 'assets/js/**/*.js', 'assets/js/main.js']

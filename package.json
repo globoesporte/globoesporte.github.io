@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "npm run webpack:dev",
+    "webpack:dev": "webpack-dev-server --config webpack.config.dev.js",
+    "webpack:prod": "webpack --config webpack.config.prod.js",
     "jekyll": "jekyll serve",
     "build": "gulp production --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +23,49 @@
     "url": "https://github.com/globoesporte/globoesporte.github.io/issues"
   },
   "homepage": "https://github.com/globoesporte/globoesporte.github.io#readme",
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "installedESLint": true,
+    "plugins": [
+      "chai-friendly"
+    ],
+    "rules": {
+      "no-unused-expressions": 0,
+      "chai-friendly/no-unused-expressions": 2,
+      "valid-jsdoc": [
+        "error",
+        {
+          "requireReturn": false,
+          "requireReturnDescription": false
+        }
+      ],
+      "require-jsdoc": [
+        "error",
+        {
+          "require": {
+            "FunctionDeclaration": true,
+            "MethodDefinition": false,
+            "ClassDeclaration": false,
+            "ArrowFunctionExpression": false
+          }
+        }
+      ]
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "globals": {
+      "window": true,
+      "jQuery": true,
+      "chai": true,
+      "expect": true,
+      "sinon": true,
+      "$": true,
+      "gecom": true
+    }
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "eslint": "^3.19.0",
@@ -35,16 +80,36 @@
     "gulp-uglify": "1.5.3",
     "gulp-watch": "^4.3.5",
     "husky": "^0.13.3",
-    "minimist": "1.2.0",
-    "rupture": "0.6.1"
+    "minimist": "1.2.0"
   },
   "dependencies": {
+    "autoprefixer": "^7.0.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-istanbul": "^4.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync-webpack-plugin": "^1.1.4",
     "contents": "4.0.2",
+    "css-loader": "^0.28.1",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-loader": "^1.7.1",
+    "eslint-plugin-chai-friendly": "^0.3.6",
+    "eslint-plugin-import": "^2.2.0",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "highlight.js": "9.9.0",
+    "imports-loader": "^0.7.1",
     "jeet": "6.1.2",
     "jekyll": "^3.0.0-beta1",
-    "pug": "^2.0.0-rc.1"
+    "npm-run-all": "^4.0.2",
+    "postcss-loader": "postcss/postcss-loader#fix",
+    "rupture": "0.6.1",
+    "style-loader": "^0.17.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "write-file-webpack-plugin": "^4.0.2"
   }
 }
