@@ -1,0 +1,27 @@
+html
+  min-height 100%
+
+  @media screen and (max-width: 767px)
+    border 0
+
+body
+  & ~ object
+    display none
+
+h1
+  font-family headingFont
+  font-weight 100
+
+/**
+ * Page content
+ */
+.page-content
+  center(containerMaxWidth, pad = sidePadding)
+  width 100%
+
+  @media screen and (max-width: 767px)
+    padding-left 20px
+    padding-right 20px
+
+.page-heading
+  font-size 20px

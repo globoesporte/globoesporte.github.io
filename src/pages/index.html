@@ -3,6 +3,26 @@ layout: default
 permalink: /
 ---
 
-<div class="home">
+{% include home/intro-text.html %}
+{% include home/open-source-header.html %}
 
+<div class="page-content">
+
+  <div class="column-open-source">
+    <ul class="repositories-list">
+      {% include home/repository-item.html language="html" %}
+      {% include home/repository-item.html language="python" %}
+      {% include home/repository-item.html language="html" %}
+      {% include home/repository-item.html language="python" %}
+      {% include home/repository-item.html language="html" %}
+      {% include home/repository-item.html language="python" %}
+      {% include home/repository-item.html language="html" %}
+      {% include home/repository-item.html language="python" %}
+    </ul>
+  </div>
+  <div class="column-other-content">
+    {% include home/section-works.html %}
+    {% include home/section-posts.html %}
+    {% include home/section-escalacao.html %}
+  </div>
 </div>

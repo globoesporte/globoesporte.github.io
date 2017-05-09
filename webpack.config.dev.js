@@ -74,7 +74,6 @@ module.exports = {
         test: /\.(png|jpe?g|gif|webm|mp4|ogv|txt|mp3|ogg|wav|pdf)$/,
         loader: 'file-loader',
         options: {
-          context: path.resolve(__dirname, './src'),
           name: '[path][name].[ext]',
         },
       },
@@ -123,6 +122,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.[name].js',
+    path: path.join(__dirname, 'dist'),
     publicPath: 'http://localhost:3000/',
   },
 };

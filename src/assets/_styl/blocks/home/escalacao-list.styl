@@ -1,0 +1,40 @@
+.escalacao-list
+  margin: 0
+  display: flex
+  flex-flow: row wrap
+  justify-content space-between
+
+  .escalacao-list-item
+    list-style none
+    width: 91px
+    margin: 0 40px 30px
+
+    &:first-child
+      margin-left: 0
+
+    &:nth-child(3n+3)
+      margin-right: 0
+
+    &:nth-child(4n+4)
+      margin-left: 0
+
+    .escalacao-picture-container,
+    .escalacao-description
+      display: inline-block
+      vertical-align: middle
+
+    .escalacao-picture-container
+      width: 85px
+      height: 85px
+      border-radius: 50%
+      overflow: hidden
+      margin-bottom: 5px
+      border 1px solid #e3e3e3
+
+      .escalacao-picture
+        width: 100%
+        height: auto
+
+    .escalacao-username
+      rem(14px)
+      color: veryLightTextColor

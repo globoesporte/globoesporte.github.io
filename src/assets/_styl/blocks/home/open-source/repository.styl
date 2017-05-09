@@ -1,0 +1,98 @@
+.repositories-list
+  margin: 0
+
+  .repositories-list-item
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    margin-bottom: 10px
+
+.repositories-list-item
+  padding: 16px 32px
+  display: flex
+  align-items: center
+  min-height: 170px
+  flex-flow: row wrap
+
+  .repository-text-details
+    width: calc(100% - 70px)
+
+  .repository-title
+    rem(24px)
+    color: mainColor
+    font-weight fontWeightSemiBold
+
+  .repository-description
+    rem(16px)
+    color: lighterTextColor
+
+  .repository-star
+    margin-left: auto
+
+    .star-value,
+    .star-icon
+      display: inline-block
+      vertical-align: middle
+
+    .star-value
+      rem(18px)
+      color mainColor
+      margin-right: 5px
+      font-weight fontWeightBold
+
+.repository-footer
+  display: flex
+  flex: 1 100%;
+  justify-content space-between
+
+  .language-repository
+    rem(12px)
+    color: veryLightTextColor
+    text-transform: uppercase
+
+  .date-updated
+    margin-left: auto
+    rem(12px)
+    color: veryLightTextColor
+
+.language-repository
+  position: relative
+  margin-left: 18px
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: -18px
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 50%
+    width: 13px
+    height: 13px
+
+  &-html
+    &::before
+      background: #e54b17
+
+  &-python
+    &::before
+      background: #3270a7
+
+.button-mais-trabalhos
+  text-align: right
+  margin-top: 25px
+  font-size: 0;
+
+  .button-plus-icon,
+  .button-caption
+    display: inline-block
+    vertical-align: middle
+
+  .button-plus-icon
+    color: mainColor
+    margin-right: 8px
+
+  .button-caption
+    rem(14px)
+    line-height: 1
+    margin: 0
+    color: mainColor
