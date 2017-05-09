@@ -5,4 +5,4 @@ subtitle: Organização dos desenvolvedores do GE no Github
 permalink: /sobre/
 ---
 
-Esse é um site da organização dos desenvolvedores do GE no Github
+Esse é um site dos desenvolvedores do GE no Github

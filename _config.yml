@@ -15,16 +15,11 @@ kramdown:
     syntax_highlighter_opts:
         disable: true
 
-include:
-  - node_modules
-
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
 gems: []
 
-exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js', 'assets/js/**/*.js', 'assets/js/main.js']
+exclude: ['node_modules', 'yarn.lock', 'assets/layout', 'package.json', 'assets/_styl', 'vendor/bundle/ruby', 'gulpfile.js', 'assets/*.js', 'assets/js/**/*.js', 'assets/js/*.js', '*.hot-update.json', '_site/*.hot-update.json', 'npm-debug.log', 'webpack.config.dev.js', 'webpack.config.prod.js', 'README.md']
+
+keep_files: ['assets/bundle.app.js', '_site/assets/bundle.app.js']
+
+incremental: true
+

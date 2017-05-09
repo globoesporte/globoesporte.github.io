@@ -5,10 +5,9 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="shortcut icon" href="{{ favicon.png | prepend: site.baseurl }}" />
 
   {% include general/head/open-graph.html %}
-  <link rel="stylesheet" href="assets/main.css">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet">

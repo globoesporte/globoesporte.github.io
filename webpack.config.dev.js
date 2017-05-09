@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const WriteFilePlugin = require('write-file-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin'); // eslint-disable-line
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -88,9 +87,8 @@ module.exports = {
   devServer: {
     port: 3000,
     hot: true,
+    headers: { 'Access-Control-Allow-Origin': '*' },
     inline: true,
-    publicPath: '/',
-    contentBase: './_site/',
   },
   externals: {
     jquery: 'jQuery',
@@ -102,14 +100,29 @@ module.exports = {
       jQuery: 'jquery',
       ga: 'ga',
     }),
-    new WriteFilePlugin({
-      test: /^(?!.*(hot)).*/,
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      open: false,
+      proxy: 'http://localhost:4000/',
+      files: [
+        `./_site/**/*.html`,
+        `./_site/assets/images/*.*`,
+      ],
+      notify: {
+        styles: {
+          top: 'auto',
+          bottom: '-200px',
+        },
+      },
+    }, {
+      reload: false,
+    }),
   ],
   output: {
     filename: 'bundle.[name].js',
-    path: path.join(__dirname, '/_site/assets/'),
+    publicPath: 'http://localhost:3000/',
   },
 };
