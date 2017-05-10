@@ -16,7 +16,7 @@
   {% include general/head/open-graph.html %}
 
   {% if site.prod %}
-    <link href="{{ site.assetspath }}main.css" rel="stylesheet" />
+    <link href="{{ site.assetspath }}main.css?{{site.time | date: '%s%N'}}" rel="stylesheet" />
   {% endif %}
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
