@@ -3,7 +3,9 @@ layout: post
 title: "DevOps"
 description: "Um resumo dos meus estudos sobre DevOps"
 date: 2017-01-02 21:51:32 -300
-author: "rperiago"
+author: "Ricardo Periago"
+authorGithub: "rperiago"
+authorAbout: "Developer: music, games, code, art and of course, coffee cannot be missed"
 ---
 
 ## O que é DevOps

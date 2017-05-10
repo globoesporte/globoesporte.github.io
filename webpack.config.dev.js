@@ -10,7 +10,7 @@ module.exports = {
       // and connect to the provided endpoint
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server', // bundle the client for hot reloading
-      './src/assets/js/main.js',
+      './assets/js/main.js',
     ],
   },
   devtool: 'inline-source-map',

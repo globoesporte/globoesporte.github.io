@@ -1,7 +1,7 @@
 <div class="home-section section-posts">
   <h3 class="home-section-title">Últimos posts</h3>
   <ul class="posts-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit: 3 %}
       {% unless post.categories contains 'work' %}
         {% include blog/post-item.html %}
       {% endunless %}

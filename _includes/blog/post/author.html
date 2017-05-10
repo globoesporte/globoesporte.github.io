@@ -1,9 +1,11 @@
 <div class="about-author">
-    <img class="about-author__img" src="../../../assets/images/avatar.jpg">
-    <div class="about-author__info">
-        <p class="about-author__title">Globoesporte</p>
-        <p class="about-author__desc">
-          globoesporte.com é um site de esportes do Grupo Globo com a convergência entre os programas esportivos da Rede Globo
-        </p>
-    </div>
+    {% for contributor in site.github.organization_members %}
+      {% if contributor.login == page.authorGithub %}
+        <img src="{{contributor.avatar_url}}" alt="{{contributor.login}}" class="about-author__img">
+        <div class="about-author__info">
+              <p class="about-author__title">{{page.author}}</p>
+              <p class="about-author__desc">{{page.authorAbout}}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
 </div>
