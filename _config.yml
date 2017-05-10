@@ -7,7 +7,6 @@ url: "http://globoesporte.github.io"
 assetspath: '/assets/'
 repository: globoesporte/globoesporte.github.io
 
-source: src
 destination: dist
 prod: true
 
