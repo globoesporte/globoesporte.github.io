@@ -1,0 +1,49 @@
+.post-header
+  margin-bottom spacingUnit
+
+.single-post__content
+  .post-title
+    rem(42px)
+    color: mainColor
+    letter-spacing -1px
+    line-height 1
+
+    +below(on-laptop)
+      font-size 36px
+
+  h2
+    font-weight: bold
+    color: mainColor
+    rem(34px)
+    margin: 40px 0 10px
+
+  h3
+    rem(30px)
+    font-weight: bold
+    color: lighten(mainColor, 10%)
+    margin: 40px 0 10px
+
+  h4
+    rem(24px)
+    color: lighten(mainColor, 15%)
+    font-weight: fontWeightSemiBold
+    margin: 20px 0 10px
+
+  h5
+    rem(20px)
+    font-weight: bold
+    color: mainColor
+    margin: 20px 0 10px
+
+  @media screen and (max-width: 767px)
+    h2
+      rem(28px)
+
+    h3
+      rem(24px)
+
+    h4
+      rem(20px)
+
+    h5
+      rem(16px)

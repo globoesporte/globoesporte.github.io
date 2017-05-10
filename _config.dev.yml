@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://globoesporte.github.io"
 assetspath: http://localhost:3000/
+repository: globoesporte/globoesporte.github.io
 
 source: src
 destination: dist

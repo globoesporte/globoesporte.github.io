@@ -2,7 +2,11 @@
   margin: 0
 
   .works-list-item
+    text-align: left
     list-style none
+
+    &-link
+      display: block
 
     .work-picture-container,
     .work-description
@@ -17,7 +21,31 @@
       border 1px solid #e3e3e3
 
     .work-description
+      text-align: left
       width calc(100% - 190px)
       rem(14px)
       color: veryLightTextColor
       font-weight fontWeightBold
+
+  +below(verySmall)
+    .works-list-item
+      margin-bottom: 20px
+      width: calc(100% + 20px)
+      margin-left: -10px
+
+      .work-picture-container,
+      .work-description
+        display: block
+
+      .work-picture-container
+        border-radius: 0
+        border: none
+
+      .work-description
+        width: 100%
+        padding: 0 10px
+        text-align: center
+
+      .work-picture-container,
+      .work-picture
+        width: 100%

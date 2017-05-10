@@ -1,0 +1,22 @@
+---
+layout: default
+permalink: /trabalhos/
+---
+
+<div class="page-content">
+  <h2 class="page-title">Trabalhos</h2>
+  <div class="page-section-works">
+    <ul class="works-list">
+      {% for work in site.categories.work %}
+      <li class="works-list-item">
+        <a href="{{work.link}}" class="works-list-item-link" target="_blank">
+          <div class="work-picture-container">
+            <img src="../assets/images/{{work.image}}" alt="" class="work-picture">
+          </div>
+          <p class="work-description">{{work.description}}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.page-content-sidebar
+  padding-top: 40px
+  column(1 / 4)
+  opacity: 0.3
+  transition opacity 0.3s
+
+  &:hover
+    opacity: 1
+
+  .repositories-list
+    margin: 0
+
+  .repositories-list-item
+    box-shadow: none
+    margin-left: -10px
+    width: calc(100% + 20px)
+    border-bottom: 1px solid #e0e0e0
+
+  .repository-title
+    rem(16px)
+
+  .repository-description
+    rem(12px)
+
+  +below(desktop)
+    display: none
+
+  .repository-star
+    .star-value
+      rem(14px)
+      display: block
+      text-align: center
+      margin-right: 0
+
+    .star-icon
+      .star-icon-svg
+        width: 20px
+        height: 20px
+
+  .date-updated
+    rem(10px)
+
+  .button-mais-trabalhos
+    margin-left: -10px
+    margin-top: 10px
+    margin-bottom: 30px
+    width: calc(100% + 20px)
+    text-align: center
+    padding: 8px 0
+    background: mainColor
+
+    .button-caption
+      color: white
+      rem(11px)
+
+    .button-plus-icon
+      color: white
+      width: 17px

@@ -1,53 +1,15 @@
 <div class="home-section section-escalacao">
   <h3 class="home-section-title">Escalação</h3>
   <ul class="escalacao-list">
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
-    <li class="escalacao-list-item">
-      <a href="#" class="escalacao-list-item-link" target="_blank">
-        <div class="escalacao-picture-container">
-          <img src="assets/images/escalacao-avatar.jpg" alt="" class="escalacao-avatar-picture">
-        </div>
-        <p class="escalacao-username">@carloslemos</p>
-      </a>
-    </li>
+    {% for contributor in site.github.organization_members %}
+      <li class="escalacao-list-item">
+        <a href="{{contributor.html_url}}" class="escalacao-list-item-link" target="_blank">
+          <div class="escalacao-picture-container">
+            <img src="{{contributor.avatar_url}}" alt="{{contributor.login}}" class="escalacao-avatar-picture">
+          </div>
+          <p class="escalacao-username">@{{contributor.login}}</p>
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </div>

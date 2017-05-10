@@ -2,30 +2,19 @@
 layout: post
 title: "DevOps"
 description: "Um resumo dos meus estudos sobre DevOps"
-date: 2017-01-01 21:51:32 -300
-categories:
-    - CI
-tags:
-    - CI
-    - back-end
-twitter_text: "Um resumo dos meus estudos sobre DevOps"
+date: 2017-01-02 21:51:32 -300
+author: "rperiago"
 ---
 
 ## O que é DevOps
 
 A comunidade em torno de DevOps tem se unido em torno de um conjunto de princípios geralmente acordados que apoiam a filosofia. Três dos princípios mais comumente aceitos são **Cultura, Automação e Métricas**. Sem qualquer um desses, seria difícil adotar uma filosofia DevOps.
 
-O termo DevOps é a combinação das palavras “desenvolvimento” e “operações”. Seu objetivo é remover as ineficiências encontradas ao longo do pipeline de **desenvolvimento, implantação e operações**.
-
-O DevOps ajuda a fornecer uma maneira melhor de analisar o pipeline de desenvolvimento, implantação e operações. Faz isso promovendo uma cultura de colaboração e automação. Além de utilizar métricas de todos os dados úteis quanto possível. Trazendo assim uma melhor qualidade na entrega do projeto a ser desenvolvido.
+O termo DevOps é a combinação das palavras “desenvolvimento” e “operações”. Seu objetivo é remover as ineficiências encontradas ao longo do pipeline de **desenvolvimento, implantação e operações**. O DevOps ajuda a fornecer uma maneira melhor de analisar o pipeline de desenvolvimento, implantação e operações. Faz isso promovendo uma cultura de colaboração e automação. Além de utilizar métricas de todos os dados úteis quanto possível. Trazendo assim uma melhor qualidade na entrega do projeto a ser desenvolvido.
 
 ### Cultura
 
-DevOps vai de Filosofia a modismo sem uma cultura para sustentá-lo.
-
-Cultura são os valores, crenças e comportamentos de um grupo/equipe, a visão, crenças e hábitos da empresa.
-
-A cultura DevOps tem diversos princípios, como a melhoria contínua, o foco em qualidade, a eliminação de desperdícios, a otimização do todo e o respeito às pessoas.
+DevOps vai de Filosofia a modismo sem uma cultura para sustentá-lo. Cultura são os valores, crenças e comportamentos de um grupo/equipe, a visão, crenças e hábitos da empresa. A cultura DevOps tem diversos princípios, como a melhoria contínua, o foco em qualidade, a eliminação de desperdícios, a otimização do todo e o respeito às pessoas.
 
 Pessoas e processos são mais importantes. Se a cultura não estiver presente, qualquer tentativa de automação está destinada a falhar.
 
@@ -151,7 +140,7 @@ Scripts escritos em qualquer linguagens como:
 - PHP
 - Java
 
-#### Fontes
+## Fontes
 
 - [CloudAcademy](https://cloudacademy.com/)
 - DevOps For Dummies®, 2nd IBM Limited Edition

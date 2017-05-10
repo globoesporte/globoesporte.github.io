@@ -1,0 +1,122 @@
+.modal-content-header
+  text-align: center
+  margin-bottom: 20px
+  font-size: 0
+
+  .modal-letter-ge,
+  .modal-github-logo
+    display: inline-block
+    vertical-align: middle
+
+  .modal-letter-ge
+    margin: 0 40px
+
+.modal
+  visibility: hidden
+  position: absolute
+  z-index: 99999
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  font-family: 'Open sans', sans-serif !important
+
+  &.active
+    visibility: visible
+
+.modal-content
+  display: none
+  top: 50%
+  position: fixed
+  border-radius: 3px
+  padding: 0 0 18px
+  left: 50%
+  width: 100%
+  transform: translate(-50%, -50%)
+  z-index: 9999
+
+.modal.active
+  .modal-content
+    display: block
+    opacity: 1
+
+  .mask-modal
+    opacity: 1
+    visibility: visible
+    transition-delay: 0s
+
+.mask-modal
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 15
+  top: 0
+  left: 0
+  width: 100%
+  height: 101%
+  background: rgba(mainColor, 0.9)
+  transition: visibility 0s linear 0.3s, opacity 0.3s
+
+.modal-menu-item
+  text-align: center
+  width: 100%
+  font-weight: fontWeightExtraBold
+  display: inline-block
+  text-transform: uppercase
+  font-size: 48px
+  padding: 17px 0
+  margin: 0
+  position: relative
+  z-index: 9
+
+  &-link
+    text-decoration: none
+    color: white
+
+.modal-players-list-container
+  max-height: 550px
+  position: relative
+  margin: 0 auto
+  padding: 0 0 0 15px
+
+.modal-players-list
+  max-width: 440px
+  width: 100%
+
+  .vertical
+    top: 50%
+    height: 100%
+
+  .position-group-header
+    text-align: center
+    padding: 10px 0
+    border-radius: 3px
+    margin: 2px auto
+    color: white
+    width: 95%
+    font-weight: $font-weight-semi-bold
+
+.close-bt
+  background: mainColor
+  border-radius: 50%
+  position: absolute
+  top: 15px
+  z-index: 16
+  cursor: pointer
+  width: 43px
+  height: 43px
+  text-align: center
+  right: 15px
+  line-height: 40px
+  opacity: 1
+  transition: opacity 0.3s
+  rem(32px)
+
+  .close-icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &:hover
+    opacity: 0.8

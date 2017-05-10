@@ -7,15 +7,31 @@
   center(containerMaxWidth, pad = sidePadding)
   position: relative
 
+  +below(desktop)
+    text-align: center
+    padding: 30px 0 35px
+
 .intro-title
   rem(24px)
+  position: relative
+  z-index: 9
   font-weight: fontWeightSemiBold
   color: textColor
 
+  +below(desktop)
+    rem(18px)
+    margin-bottom: 8px
+
 .intro-text
   rem(18px)
+  position: relative
+  z-index: 9
   max-width 370px
   color: lighterTextColor
+
+  +below(desktop)
+    rem(14px)
+    max-width: 100%
 
 .octopus-mascot
   position: absolute
@@ -24,8 +40,14 @@
   max-width: 573px
   z-index: 2
 
+  +below(desktop)
+    display: none
+
 .ge-letters
   position: absolute
   top: 50%
   transform: translateY(-50%)
   right: 440px
+
+  +below(desktop)
+    display: none

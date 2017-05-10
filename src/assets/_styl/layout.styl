@@ -23,5 +23,19 @@ h1
     padding-left 20px
     padding-right 20px
 
+  +below(desktop)
+    padding-left: 10px
+    padding-right: 10px
+
 .page-heading
   font-size 20px
+
+.page-content-with-sidebar-wrapper
+  clearfix()
+
+.page-content-with-sidebar
+  column(3 / 4)
+  padding: 0
+
+  +below(desktop)
+    width: 100%

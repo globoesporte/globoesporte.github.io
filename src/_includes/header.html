@@ -1,10 +1,12 @@
 <header class="header--main-container">
   <div class="page-content header--main">
-    <div class="header__nav"></div>
-    <a class="ge-logo ge-logo-home ge-logo-desktop" href="{{ my_page.url | prepend: site.baseurl }}">
+    <div class="header__nav-container">
+      <div class="header__nav"></div>
+    </div>
+    <a class="ge-logo ge-logo-home ge-logo-desktop" href="/">
       {% include general/header/logo-ge.html %}
     </a>
-    <a target="_blank" class="github-logo" href="https://github.com/globoesporte/globoesporte.github.io">
+    <a target="_blank" class="github-logo" href="https://github.com/globoesporte">
       {% include general/header/logo-github.html %}
     </a>
   </div>

@@ -6,12 +6,22 @@
     border-radius: 3px
     margin-bottom: 10px
 
+    +below(desktop)
+      box-shadow: none
+      margin-left: -10px
+      width: calc(100% + 20px)
+      border-bottom: 1px solid #e0e0e0
+
 .repositories-list-item
-  padding: 16px 32px
-  display: flex
-  align-items: center
-  min-height: 170px
-  flex-flow: row wrap
+  list-style none
+
+  &-link
+    display: flex
+    align-items: center
+    min-height: 170px
+    flex-flow: row wrap
+    width: 100%
+    padding: 16px 32px
 
   .repository-text-details
     width: calc(100% - 70px)
@@ -20,6 +30,7 @@
     rem(24px)
     color: mainColor
     font-weight fontWeightSemiBold
+    margin-bottom: 10px
 
   .repository-description
     rem(16px)
@@ -33,11 +44,33 @@
       display: inline-block
       vertical-align: middle
 
+      .star-icon-svg
+        width: 26px
+
     .star-value
       rem(18px)
       color mainColor
       margin-right: 5px
       font-weight fontWeightBold
+
+  +below(desktop)
+    .repository-title
+      rem(16px)
+
+    .repository-description
+      rem(12px)
+
+    .repository-star
+      .star-value
+        rem(14px)
+        display: block
+        text-align: center
+        margin-right: 0
+
+      .star-icon
+        .star-icon-svg
+          width: 20px
+          height: 20px
 
 .repository-footer
   display: flex
@@ -53,6 +86,10 @@
     margin-left: auto
     rem(12px)
     color: veryLightTextColor
+
+  +below(desktop)
+    .date-updated
+      rem(10px)
 
 .language-repository
   position: relative
@@ -80,6 +117,7 @@
 .button-mais-trabalhos
   text-align: right
   margin-top: 25px
+  display: inline-block
   font-size: 0;
 
   .button-plus-icon,
@@ -90,9 +128,27 @@
   .button-plus-icon
     color: mainColor
     margin-right: 8px
+    width: 23px
 
   .button-caption
     rem(14px)
     line-height: 1
     margin: 0
     color: mainColor
+
+  +below(verySmall)
+    margin-left: -10px
+    margin-top: 10px
+    margin-bottom: 30px
+    width: calc(100% + 20px)
+    text-align: center
+    padding: 8px 0
+    background: mainColor
+
+    .button-caption
+      color: white
+      rem(11px)
+
+    .button-plus-icon
+      color: white
+      width: 17px

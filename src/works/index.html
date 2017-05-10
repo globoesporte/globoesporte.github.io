@@ -1,0 +1,24 @@
+---
+layout: default
+title: Trabalhos
+---
+
+<div class="project">
+  <ul class="project-list">
+    {% for post in site.categories.work %}
+    <li class="project-list__item">
+      <a class="project-list__link" href="{{ post.url | prepend: site.baseurl }}">
+        <div class="project-list__cover">
+          <img src="../assets/images/projects/{{ post.cover | prepend: site.baseurl }}">
+        </div>
+        <div class="project-list__details">
+          <h2 class="project-list__title">{{ post.client }}</h2>
+          <p class="project-list__desc">
+            {{post.description}}
+          </p>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

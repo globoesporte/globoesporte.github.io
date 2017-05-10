@@ -1,0 +1,7 @@
+<div class="page-content-sidebar">
+  <ul class="repositories-list">
+    {% for repository in site.github.public_repositories limit: 3 %}
+    {% include home/repository-item.html repository=repository %}
+    {% endfor %}
+  </ul>
+</div>

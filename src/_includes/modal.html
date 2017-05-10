@@ -1,0 +1,34 @@
+<div id="modal" class="modal">
+  <div class="mask-modal"></div>
+  <div class="close-bt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15.75" class="close-icon"
+         viewBox="0 0 17 15.75">
+      <path fill="#ffffff" id="X" class="cls-1"
+            d="M17.003 15.75l-6.848-8.082L16.84.008h-3.26l-3 3.69A31.97 31.97 0 0 0 8.59 6.36h-.1C7.9 5.52 7.282 4.725 6.466 3.698l-2.9-3.69H.273L6.73 7.784.012 15.75h3.26l2.643-3.457a38.434 38.434 0 0 0 2.38-3.13h.066c.686.91 1.4 1.775 2.545 3.106l2.8 3.48H17z" />
+    </svg>
+  </div>
+  <div id="modal-content" class="modal-content">
+    <div class="modal-content-header">
+      <a href="http://globoesporte.globo.com/" class="modal-letter-ge" target="_blank">
+        {% include home/svg-ge-letter-modal.html %}
+      </a>
+      <a href="https://github.com/globoesporte" class="modal-github-logo" target="_blank">
+        {% include general/header/logo-github.html %}
+      </a>
+    </div>
+    <ul class="modal-menu-item-list">
+      <li class="modal-menu-item">
+        <a href="{{site.baseurl}}trabalhos" class="modal-menu-item-link">
+          Trabalhos
+        </a>
+      </li>
+      <li class="modal-menu-item">
+        <a href="{{site.baseurl}}blog" class="modal-menu-item-link">
+          Blog
+        </a>
+      </li>
+    </ul>
+    <div class="modal-content-container">
+    </div>
+  </div>
+</div>

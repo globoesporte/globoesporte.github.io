@@ -6,8 +6,16 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
+  +below(desktop)
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center
+
 .open-source-title
   color: textColor
   font-weight: fontWeightExtraBold
   rem(30px)
   text-transform: uppercase
+
+  +below(desktop)
+    rem(16px)

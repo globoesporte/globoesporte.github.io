@@ -1,8 +1,8 @@
 <header class="single-post__header">
-  <h1 class="single-post__title" itemprop="name headline">{{ page.title }}</h1>
+  <h2 class="single-post__title" itemprop="name headline">{{ page.title }}</h2>
   <p class="single-post__meta">
     <time class="single-post__time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ page.date | date: "%b %-d, %Y" }}
+      {{page.date | date: "%d/%m/%Y"}}
     </time>
   </p>
 </header>

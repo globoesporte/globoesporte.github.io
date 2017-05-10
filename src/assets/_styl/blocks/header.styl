@@ -3,17 +3,12 @@
   width 100%
 
 .header--main
+  position: relative
   center(containerMaxWidth, pad = sidePadding)
   display flex
   align-items center
   justify-content space-between
   height: 75px
-
-  @media screen and (max-width: 767px)
-    flex-direction: column
-    padding-top: 30px
-    padding-bottom: 5px
-    margin-bottom 30px
 
 .header__title
   color hightlightColor
@@ -32,6 +27,7 @@
   height: 4px
   border-radius 8px
   display: block
+  transition: top 0.1s
 
 .header__nav
   cursor: pointer
@@ -48,6 +44,18 @@
   @media screen and (max-width: 767px)
     margin-left 0
 
+.header__nav-container
+  cursor: pointer
+  height: 36px;
+  padding-top: 15px;
+
+  &:hover
+    .header__nav::before
+      top: -11px
+
+    .header__nav::after
+      top: 7px
+
 .header__link
   color hightlightColor
   rem(18px)
@@ -58,6 +66,3 @@
 
 .single-post__header
   margin-top: 45px
-
-.github-logo
-  margin-left: auto

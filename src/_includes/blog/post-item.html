@@ -1,10 +1,11 @@
-<li class="post-list__card post">
-  <div class="post-list__main">
-    <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
-      <div class="post__content">
-        <h2 class="post__title">{{ post.title }}</h2>
-        <p class="post__desc">{{ post.description }}</p>
-      </div>
-    </a>
+<li class="posts-list-item">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="posts-list-item-link">
+    <p class="post-title">{{ post.title }}</p>
+    <p class="post-description">{{post.description}}</p>
+  </a>
+  <div class="post-footer">
+    <p class="post-date">{{post.date | date: "%d/%m/%Y"}}</p>
+    <span class="data-divisor"></span>
+    <a href="https://github.com/{{post.author}}" target="_blank" class="post-author">@{{post.author}}</a>
   </div>
 </li>

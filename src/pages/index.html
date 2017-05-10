@@ -10,14 +10,9 @@ permalink: /
 
   <div class="column-open-source">
     <ul class="repositories-list">
-      {% include home/repository-item.html language="html" %}
-      {% include home/repository-item.html language="python" %}
-      {% include home/repository-item.html language="html" %}
-      {% include home/repository-item.html language="python" %}
-      {% include home/repository-item.html language="html" %}
-      {% include home/repository-item.html language="python" %}
-      {% include home/repository-item.html language="html" %}
-      {% include home/repository-item.html language="python" %}
+      {% for repository in site.github.public_repositories %}
+        {% include home/repository-item.html repository=repository %}
+      {% endfor %}
     </ul>
   </div>
   <div class="column-other-content">

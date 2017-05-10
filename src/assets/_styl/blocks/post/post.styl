@@ -1,0 +1,68 @@
+.single-post
+  .single-post__content
+    opacity: 1
+
+    p
+      margin-bottom: 15px
+      line-height: 2
+      color: lighterTextColor
+
+    blockquote
+      padding: 10px 20px;
+      border-left: 5px solid #eee;
+      margin: 30px 0
+
+      p
+        rem(20px)
+        color: veryLightTextColor
+
+        +below(verySmall)
+          rem(14px)
+
+    a
+      color mainColor
+      font-weight fontWeightSemiBold !important
+
+    ul
+      li
+        color: lighterTextColor
+
+    ul
+      li
+        a
+          color mainColor
+          opacity: 1
+          transition: opacity 0.3s
+
+          &:hover
+            opacity: 0.7
+
+  .single-post__time
+    color: veryLightTextColor
+
+  .about-author
+    margin-top: 60px
+
+    .about-author__img
+      border-radius: 50%
+      margin-right: 20px
+
+    .about-author__info,
+    .about-author__img
+      display: inline-block
+      vertical-align: middle
+
+    .about-author__info
+      width: calc(100% - 200px)
+
+    +below(verySmall)
+      text-align: center
+
+      .about-author__info,
+      .about-author__img
+        margin: 0 auto
+        display: block
+        text-align: center
+
+      .about-author__img
+        margin-bottom: 20px

@@ -17,3 +17,14 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
     return unit(value, u)
   }
 }
+
+clearfix()
+  zoom 1
+
+  &:after
+  &:before
+    content ""
+    display table
+
+  &:after
+    clear both
