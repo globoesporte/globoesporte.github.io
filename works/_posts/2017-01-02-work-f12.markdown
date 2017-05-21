@@ -1,9 +1,0 @@
----
-layout: post
-title: "Guia da fórmula 1"
-description: "Guia da Fórmula 1: veja as chances de todos os pilotos e equipes"
-link: "http://app.globoesporte.globo.com/motor/formula-1/raio-x-2017/"
-image: "work-1.jpg"
-categories:
-    - work
----
