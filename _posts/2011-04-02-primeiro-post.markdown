@@ -6,6 +6,8 @@ date: 2017-01-02 21:51:32 -300
 author: "Ricardo Periago"
 authorGithub: "rperiago"
 authorAbout: "Developer: music, games, code, art and of course, coffee cannot be missed"
+categories:
+    - blog
 ---
 
 ## O que é DevOps

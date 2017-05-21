@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf ./dist",
     "start": "npm run webpack:dev",
-    "jekyll": "jekyll serve --config _config.dev.yml",
+    "jekyll": "npm run clean && jekyll serve --force_polling --config _config.dev.yml",
     "build": "npm run webpack:prod",
     "webpack:dev": "webpack-dev-server --config webpack.config.dev.js",
     "webpack:prod": "webpack --config webpack.config.prod.js",
@@ -93,6 +94,7 @@
     "jekyll": "^3.0.0-beta1",
     "npm-run-all": "^4.0.2",
     "postcss-loader": "postcss/postcss-loader#fix",
+    "rimraf": "^2.6.1",
     "rupture": "0.6.1",
     "style-loader": "^0.17.0",
     "stylus": "^0.54.5",

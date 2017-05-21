@@ -1,8 +1,10 @@
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'work'" %}
+
 <div class="home-section section-works">
 
   <h3 class="home-section-title">Trabalhos</h3>
   <ul class="works-list">
-    {% for work in site.categories.work limit: 3 %}
+    {% for work in posts limit:3 %}
       <li class="works-list-item">
         <a href="{{work.link}}" class="works-list-item-link" target="_blank">
           <div class="work-picture-container">

@@ -21,5 +21,3 @@ kramdown:
 gems: []
 
 exclude: ['node_modules', 'yarn.lock', 'assets/layout', 'package.json', 'assets/_styl', 'vendor/bundle/ruby', '*.hot-update.json', '_site/*.hot-update.json', 'npm-debug.log', 'webpack.config.dev.js', 'webpack.config.prod.js', 'README.md']
-
-incremental: true

@@ -1,10 +1,10 @@
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
+
 <div class="home-section section-posts">
   <h3 class="home-section-title">Últimos posts</h3>
   <ul class="posts-list">
-    {% for post in site.posts limit: 3 %}
-      {% unless post.categories contains 'work' %}
-        {% include blog/post-item.html %}
-      {% endunless %}
+    {% for post in posts limit: 3 %}
+      {% include blog/post-item.html %}
     {% endfor %}
   </ul>
   <a href="{{site.baseurl}}blog" class="button-mais-trabalhos">
