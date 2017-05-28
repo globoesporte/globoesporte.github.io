@@ -10,7 +10,10 @@
           <div class="work-picture-container">
             <img src="assets/images/{{work.image}}" alt="" class="work-picture">
           </div>
-          <p class="work-description">{{work.description}}</p>
+          <span class="work-details">
+            <p class="work-title">{{work.title}}</p>
+            <p class="work-description">{{work.description}}</p>
+          </span>
         </a>
       </li>
     {% endfor %}
